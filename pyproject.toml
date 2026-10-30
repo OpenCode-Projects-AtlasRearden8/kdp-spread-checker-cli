@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kdp-spread-checker-cli"
+version = "0.1.0"
+description = "Stdlib-only CLI that checks a finished KDP paperback interior PDF before upload: page count/parity, blank-page placement, margins and bleed by trim size, duplicate/missing front-back matter, and image geometry - with a friendly fix list ranked by severity."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Asdale Dynamics, LLC" }]
+keywords = ["kdp", "pdf", "self-publishing", "bleed", "spreads", "checker"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Text Processing",
+]
+
+[project.urls]
+Homepage = "https://dylanasdale.github.io"
+
+[project.scripts]
+kdp-spread-checker = "kdp_spread_checker.cli:main"
+
+[tool.setuptools]
+packages = ["kdp_spread_checker"]
